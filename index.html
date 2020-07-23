@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <button onclick="powr()">Power</button>
+<!-- <button onclick="leapyear()" id="year">LeapYear</button> -->
+<button onclick="link()">Click On me</button>
+<div>
+<img onclick="Mobile()" width="100px" src="images/img1.jfif"  id="phn1" >
+<img onclick="Mobile()"  width="100px" src="images/img2.jfif" id="phn1">
+<img onclick="Mobile()" width="100px" src="images/img3.png" id="phn1">
+<img onclick="Mobile()" width="100px" src="images/img4.jfif" id="phn1">
+</div>
+<div>
+    <img  src="images/flower1.jfif" id='flower1' onmouseover="over()" onmouseout="out()" width="100px">
+    <!-- <img onmouseout="out()" width="100px" src="images/flower2.jfif" id="flower2"> -->
+</div>
+<div>
+    <button id='clicks' onclick="onClick()">+</button>
+    <button id='dec' onclick="ofClick()">-</button>
+</div>
+
+<div>
+    <table id='tableData'>
+        <tr>
+            <th>Index</th>
+            <th>Name</th>
+            <th>Class</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>Jhone</td>
+            <td>10</td>
+        <td><button onclick="deleteRow(this)">Delete</button></td>
+
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Doe</td>
+            <td>9</td>
+        <td><button onclick="deleteRow(this)">Delete</button></td>
+
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Mark</td>
+            <td>10</td>
+        <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Jame</td>
+            <td>8</td>
+        <td><button onclick="deleteRow(this)">Delete</button></td>
+ </tr>
+    </table>
+</div>
+    
+     <form action="#" method="POST">
+
+        Firstname:
+         <input type="text" name="Enter First Name" maxlength="25" id='fname'>
+         <br>
+        Lastname:
+         <input type="text" name="Enter Last Name" maxlength="10" id='lname'>
+         <br>
+         Age:
+         <input type="number" name="num" maxlength="2" id='age'>
+         <br>
+        <input type="button" value="submit" onclick="form1()">
+     </form>
+
+     <div>
+         <h2>Perfumes</h2>
+         <ul id='readme'  >
+             <li>J.perfume</li>
+             <li>2000rs</li>
+             <li>For Men</li>
+             <br>
+             <li>Axe Body Spray</li>
+             <li>500Rs</li>
+             <li>For women</li>
+             <a href="javascript:void(0)" onclick="readMore()">readmore</a>
+         </ul>
+     </div>
+
+     <!-- <div>
+        <table id='tableData1'>
+            <tr>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Class</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>Jhone</td>
+                <td>10</td>
+                <td><button onclick="editRow1(this)">Edit</button></td>
+
+            <td><button onclick="deleteRow1(this)">Delete</button></td>
+      </tr>
+            <tr>
+                <td>1</td>
+                <td>Doe</td>
+                <td>9</td>
+                <td><button onclick="editRow1(this)">Edit</button></td>
+
+            <td><button onclick="deleteRow1(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Mark</td>
+                <td>10</td>
+                <td><button onclick="editRow1(this)">Edit</button></td>
+
+            <td><button onclick="deleteRow1(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Jame</td>
+                <td>8</td>
+                <td><button onclick="editRow1(this)">Edit</button></td>
+
+            <td><button onclick="deleteRow1(this)">Delete</button></td>
+
+     </tr>
+        </table> -->
+
+        <div>
+            <table align='center'  id="data_table" >
+                <tr>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Class</th>
+                </tr>
+                <tr id="row1">
+                    <td id="name_row1">0</td>
+                    <td id="country_row1">Jhone</td>
+                    <td id="age_row1">10</td>
+                    <td>
+                        <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+<input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+<input type="button" value="Delete" class="delete" onclick="delete_row('1')">
+
+</td>
+</tr>
+<tr id="row2">
+    <td id="name_row2">1</td>
+    <td id="country_row2">Doe</td>
+    <td id="age_row2">9</td>
+    <td>
+    <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+    <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
+<input type="button" value="Delete" class="delete" onclick="delete_row('2')">
+</td>
+</tr>
+<tr id="row3">
+    <td id="name_row3">2 </td>
+    <td id="country_row3">Mark</td>
+    <td id="age_row3">10</td>
+    <td>
+    <input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+    <input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')">
+    <input type="button" value="Delete" class="delete" onclick="delete_row('3')">
+    </td>
+    </tr>
+    <tr id="row4">
+    <td id="name_row4">3 </td>
+    <td id="country_row4">Jame</td>
+    <td id="age_row4">8</td>
+    <td>
+    <input type="button" id="edit_button4" value="Edit" class="edit" onclick="edit_row('4')">
+    <input type="button" id="save_button4" value="Save" class="save" onclick="save_row('4')">
+    <input type="button" value="Delete" class="delete" onclick="delete_row('4')">
+    </td>
+    </tr>
+</table>
+</div>
+  
+    <div>
+     <p id='para' ><button onclick="ZoomIn()">Zoom In</button> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto repellendus maxime sit eveniet reiciendis molestias optio, eos placeat ullam asperiores non officia dolorum rerum ex itaque explicabo possimus natus quia.
+<button onclick="ZoomOut()">Zoom Out</button></p>
+    </div>
+
+    <div> <h1> DOM </h1> <div id="form-content" class="content"> 
+        <label for="first-name">First Name</label> 
+        <input type="text" id="first-name" /> 
+        <label for="last-name">Last Name</label>
+         <input type="text" id="last-name" />
+          <label for="email">Email</label> 
+         <input type="text" id="email" /> </div> 
+         <div id="main-content" class="content"> 
+             <p class="render"> First Name : Alex</p>
+              <p class="render" id="lastName">
+                  
+                
+                
+                Last Name: Bank</p>
+               <p class="render"> Email : alexbank@example.com</p> 
+               <p class="render"> Country : Pakistan </p>
+                <p class="render"> contact : +92 300 1234567</p> </div> </div> 
+
+      
+                
+
+                <!-- Button trigger modal -->
+
+                <div>
+                    <img  onclick="addImage(this)" data-toggle="modal" data-target="#exampleModal" class="img"  src="images/13.jpg" alt="">
+                    <img  onclick="addImage(this)" data-toggle="modal" data-target="#exampleModal" class="img" src="images/pic1.jfif" alt="">
+                    <img onclick="addImage(this)" data-toggle="modal" data-target="#exampleModal" class="img" src="images/pic2.jfif" alt="">
+                    <img onclick="addImage(this)" data-toggle="modal" data-target="#exampleModal" class="img" src="images/pic3.jfif" alt="">
+                </div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+           <h5 class="modal-title" id="exampleModalLabel">Beautiful images</h5> 
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        <img class="bigimage" src="" alt="" id="mdImage"> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+     <script src="app.js"></script>
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
